@@ -1,6 +1,6 @@
 // this returns a component containing list of all the blogs
 
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 export async function loader() {
   try {
@@ -33,7 +33,9 @@ export default function BlogList() {
             {blogList.articles.map((art) => {
               return (
                 <li key={art.id}>
-                  <Article article={art} />
+                  <Link to={`/blogs/${art.id}`}>
+                    <Article article={art} />
+                  </Link>
                 </li>
               );
             })}

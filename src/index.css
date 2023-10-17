@@ -381,3 +381,12 @@ i {
   justify-content: center;
   width: 100%;
 }
+
+#blog-list ul {
+  list-style-type: none;
+}
+
+#blog-list ul li a {
+  text-decoration: none;
+  color: inherit;
+}
