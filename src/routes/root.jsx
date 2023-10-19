@@ -28,10 +28,10 @@ export default function Root() {
               <Link to={`/blogs/`}>Blogs</Link>
             </li>
             <li>
-              <Link to={`/login/`}>Login</Link>
+              <Link to={`/accounts/login/`}>Login</Link>
             </li>
             <li>
-              <Link to={`/signup/`}>Signup</Link>
+              <Link to={`/accounts/signup/`}>Signup</Link>
             </li>
           </ul>
         </nav>
