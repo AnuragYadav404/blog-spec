@@ -66,6 +66,7 @@ export default function Login() {
   console.log(fetcher.data);
   return (
     <div id="login-page">
+      <h1>Login Page</h1>
       {fetcher.data && fetcher.data.msg}
       {loginStatus && !loginStatus.status ? (
         <fetcher.Form method="post">
@@ -88,7 +89,7 @@ export default function Login() {
           <button type="submit">Login</button>
         </fetcher.Form>
       ) : (
-        <p>You are currently logged in!</p>
+        <i>You are currently logged in!</i>
       )}
     </div>
   );

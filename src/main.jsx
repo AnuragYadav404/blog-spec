@@ -14,7 +14,8 @@ import Login, {
   loader as loginLoader,
   action as loginAction,
 } from "./routes/login";
-import Signup from "./routes/signup";
+import Signup, { action as signupAction } from "./routes/signup";
+import LogOut, { action as logoutAction } from "./routes/logout";
 
 const router = createBrowserRouter([
   {
@@ -48,6 +49,14 @@ const router = createBrowserRouter([
       {
         path: "/accounts/signup",
         element: <Signup />,
+        loader: loginLoader,
+        action: signupAction,
+      },
+      {
+        path: "/accounts/logout",
+        element: <LogOut />,
+        loader: loginLoader,
+        action: logoutAction,
       },
     ],
   },
